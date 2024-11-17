@@ -11,6 +11,7 @@ export const ExchangeForm = () => {
     const { value } = e.target.elements.currency;
     const [amount, from, , to] = value.split(' ');
     dispatch(fetchExchangeCurrency({ amount, from, to }));
+    e.target.reset();
   };
   return (
     <form className={styles.form} onSubmit={handleSubmit}>

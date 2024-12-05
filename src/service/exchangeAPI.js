@@ -18,3 +18,10 @@ export const latestRates = async baseCurrency => {
   const { data } = await instance.get(`/latest?symbols&base=${baseCurrency}`);
   return Object.entries(data.rates);
 };
+
+export const currencyList = async () => {
+  const { data } = await instance.get(
+    'https://api.apilayer.com/currency_data/list',
+  );
+  return Object.entries(data.currencies);
+};

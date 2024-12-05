@@ -10,7 +10,7 @@ import {
 } from 'components';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchRates } from 'reduxState/operations';
+import { fetchList, fetchRates } from 'reduxState/operations';
 import {
   selectBaseCurrency,
   selectError,
@@ -26,8 +26,10 @@ const Rates = () => {
   const baseCurrency = useSelector(selectBaseCurrency);
   const filteredRates = useSelector(selectFilteredRates);
   const rates = useSelector(selectRates);
+
   useEffect(() => {
     dispatch(fetchRates(baseCurrency));
+    dispatch(fetchList());
   }, [dispatch, baseCurrency]);
 
   return (

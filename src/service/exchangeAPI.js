@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const instance = axios.create({
   baseURL: 'https://api.apilayer.com/exchangerates_data/',
-  headers: { apikey: 'M1ZqrcTysM3pg6HCBuEDXzapd1ZRTKg2' },
+  headers: { apikey: 'DIEtb1cRoAZvncEvnH2N8KIhyyMEDaEA' },
 });
 
 export const exchangeCurrency = async credentials => {
@@ -20,8 +20,9 @@ export const latestRates = async baseCurrency => {
 };
 
 export const currencyList = async () => {
-  const { data } = await instance.get(
+  const { data } = await axios.get(
     'https://api.apilayer.com/currency_data/list',
+    { headers: { apikey: '0GwQ3KpfD8lfEolFnC4lCOm7Gv8z9C9d' } },
   );
   return Object.entries(data.currencies);
 };

@@ -28,8 +28,8 @@ const Rates = () => {
   const rates = useSelector(selectRates);
 
   useEffect(() => {
-    dispatch(fetchRates(baseCurrency));
-    dispatch(fetchList());
+    //  dispatch(fetchRates(baseCurrency));
+    //  dispatch(fetchList());
   }, [dispatch, baseCurrency]);
 
   return (

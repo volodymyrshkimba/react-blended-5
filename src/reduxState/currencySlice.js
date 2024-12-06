@@ -13,8 +13,19 @@ const currencySlice = createSlice({
     exchangeInfo: null,
     isLoading: false,
     isError: null,
-    rates: [],
-    list: [],
+    rates: [
+      ['AED', '0.813399'],
+      ['AFN', '0.72007'],
+      ['ALL', '107.346001'],
+      ['AMD', '0.12444'],
+    ],
+    list: [
+      ['AED', 'United Arab Emirates Dirham'],
+      ['AFN', 'Afghan Afghani'],
+      ['ALL', 'Albanian Lek'],
+      ['AMD', 'Armenian Dram'],
+      ['USD', 'United States Dollar'],
+    ],
   },
   reducers: {
     setBaseCurrency(state, action) {

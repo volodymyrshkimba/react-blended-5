@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { Header } from './components';
 import Home from 'pages/Home';
 import Rates from 'pages/Rates';
+import RateDetailPage from 'pages/RateDetailPage';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fatchBaseCurrency } from 'reduxState/operations';
@@ -33,6 +34,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rates" element={<Rates />} />
+        <Route path="/rates/:rateName" element={<RateDetailPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>

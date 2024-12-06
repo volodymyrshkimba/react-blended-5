@@ -1,0 +1,83 @@
+.goBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, -100%);
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: var(--font-medium);
+  font-weight: bold;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--shadow-small);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--animation-cubicBezier),
+    transform var(--animation-cubicBezier);
+}
+
+.goBack:hover {
+  background: var(--color-accent);
+}
+
+.goBack:active {
+  background: var(--color-dark);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.goBack:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.wrapper {
+  background: var(--color-white);
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.box {
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.capital {
+  margin: 0 0 0.5rem 0;
+  color: #999;
+  font-size: 1.25rem;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #333;
+}
+
+.titleAccent {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #333;
+  color: var(--color-accent);
+}
+
+.details {
+  font-size: 1.25rem;
+  color: #999;
+}
+
+.accent {
+  color: var(--color-primary);
+  font-weight: bold;
+}

@@ -1,4 +1,4 @@
-import { RiExchangeDollarFill } from 'react-icons/ri';
+import { MdCurrencyExchange } from 'react-icons/md';
 import styles from './ExchangeForm.module.css';
 
 import { useDispatch } from 'react-redux';
@@ -16,7 +16,7 @@ export const ExchangeForm = () => {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <button className={styles.button} type="submit">
-        <RiExchangeDollarFill className={styles.icon} />
+        <MdCurrencyExchange className={styles.icon} />
       </button>
 
       <input

@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
 
-import { MdCurrencyExchange } from 'react-icons/md';
+import { BsCurrencyExchange } from 'react-icons/bs';
 
 import styles from './Header.module.css';
 import { useSelector } from 'react-redux';
@@ -15,7 +15,7 @@ export const Header = () => {
     <>
       <header className={styles.header}>
         <div className={styles.wrapper}>
-          <MdCurrencyExchange className={styles.logo} />
+          <BsCurrencyExchange className={styles.logo} />
           <nav>
             <ul className={styles.nav}>
               <li>

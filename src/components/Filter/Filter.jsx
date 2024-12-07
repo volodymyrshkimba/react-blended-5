@@ -13,7 +13,7 @@ export const Filter = () => {
     <input
       onChange={handleChange}
       value={filter}
-      placeholder="What currency are you looking for?🧐"
+      placeholder="What currency are you looking for?"
       className={styles.input}
     />
   );

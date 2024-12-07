@@ -15,6 +15,7 @@ import {
   selectBaseCurrency,
   selectError,
   selectFilteredRates,
+  selectListLikeObject,
   selectLoading,
   selectRates,
 } from 'reduxState/selectors';
@@ -26,10 +27,11 @@ const Rates = () => {
   const baseCurrency = useSelector(selectBaseCurrency);
   const filteredRates = useSelector(selectFilteredRates);
   const rates = useSelector(selectRates);
+  const list = useSelector(selectListLikeObject);
 
   useEffect(() => {
-    //  dispatch(fetchRates(baseCurrency));
-    //  dispatch(fetchList());
+    dispatch(fetchRates(baseCurrency));
+    dispatch(fetchList());
   }, [dispatch, baseCurrency]);
 
   return (
@@ -40,8 +42,9 @@ const Rates = () => {
           bottom
           title={
             <Wave
-              text={`$ $ $ Current exchange rate for 1 ${baseCurrency} $ $ $`}
+              text={`$ $ $ Current exchange rate for ${list[baseCurrency]} $ $ $`}
               effect="fadeOut"
+              speed={1}
               effectChange={4.0}
             />
           }

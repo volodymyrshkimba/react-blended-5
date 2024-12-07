@@ -18,6 +18,7 @@ const currencySlice = createSlice({
       ['AFN', '0.72007'],
       ['ALL', '107.346001'],
       ['AMD', '0.12444'],
+      ['UAH', '41.08889'],
     ],
     list: [
       ['AED', 'United Arab Emirates Dirham'],
